@@ -8,12 +8,15 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "tail": "npx tailwindcss -i ./src/input.css -o ./src/MainView.css --watch"
+    "tail": "npx tailwindcss -i ./src/input.css -o ./src/MainView.css --watch",
+    "server": "node ./src/server/server.js"
   },
   "dependencies": {
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.4",
     "@mui/material": "^6.1.4",
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
     "express": "^4.21.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -22,6 +25,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
