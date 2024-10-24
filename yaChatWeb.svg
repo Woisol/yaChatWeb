@@ -1,0 +1,18 @@
+<svg width="96.000000" height="96.000000" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip3_5">
+			<rect id="yaChatWeb" width="96.000000" height="96.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<linearGradient x1="96.000137" y1="-0.000072" x2="0.000004" y2="96.000000" id="paint_linear_3_5_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFE999"/>
+			<stop offset="1.000000" stop-color="#FCCB1B"/>
+		</linearGradient>
+	</defs>
+	<rect id="yaChatWeb" width="96.000000" height="96.000000" fill="url(#paint_linear_3_5_0)" fill-opacity="1.000000"/>
+	<g clip-path="url(#clip3_5)">
+		<path id="C" d="M66.11 70.1C62.39 74.4 57.78 76.82 51.7 76.82C40.06 76.82 31.3 67.81 31.3 52.57C31.3 37.4 40.19 28.18 52.09 28.18C57.78 28.18 62.27 31.01 64.95 34.01L61.75 37.85C59.33 35.23 56.19 33.37 52.16 33.37C43.27 33.37 37.38 40.67 37.38 52.39C37.38 64.21 43 71.64 51.97 71.64C56.44 71.64 59.83 69.65 62.84 66.4L66.11 70.1Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>

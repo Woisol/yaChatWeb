@@ -1,4 +1,3 @@
-import * as React from 'react';
 import ChatBubble, { ChatMsg } from './ChatBubble';
 
 export default function ChatArea({ chatMsgs }: { chatMsgs: ChatMsg[] }) {

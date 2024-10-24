@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { UserNameContext } from '../App';
 import { TextField } from '@mui/material';
-export default function Header({ chaterCount, connected }: { chaterCount?: number, connected?: boolean }) {
+export default function Header({ connected }: { chaterCount?: number, connected?: boolean }) {
 	const [userName, setUserName] = React.useContext(UserNameContext);
 	return (
 		<div className="w-screen h-16 py-4 relative text-xl text-center filter rounded-b-2xl bg-white backdrop-blur-sm bg-opacity-75 z-10">

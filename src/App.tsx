@@ -8,13 +8,12 @@ import "react-toastify/ReactToastify.css"
 import { ChatMsg } from './ChatArea/ChatBubble';
 import axios, { AxiosResponse } from 'axios';
 import { BASE_URL } from './util/constant';
-import { httpPost } from './util/http';
 import { toast } from './util/toast';
 
 export const UserNameContext = createContext<[string, (name: string) => void]>(['', () => { }]);
 function App() {
   const [userName, setUserName] = useState('');
-  const { chaterCount, setChaterCount, chatMsgs, setChatMsgs, connected } = useServer()
+  const { chaterCount, chatMsgs, setChatMsgs, connected } = useServer()
 
   // useEffect(() => {
   //   setInterval(() => {
@@ -74,7 +73,8 @@ function useServer() {
           setTimeout(() => { chatContainer?.scrollTo({ top: chatContainer.scrollHeight, behavior: 'smooth' }) }, 100)
           // ！用这种scroll方式！！！
         })
-        .catch(err => { console.log(err); toast('error', '服务器连接失败, error:' + err); clearInterval(intervalTimer!); setConnected(false) })
+        .catch(err => { if (!err) return; console.log(err); toast('error', '服务器连接失败, error:' + err); clearInterval(intervalTimer!); setConnected(false) })
+      // !开发环境没问题但是一build就无消息报错……
     }, 1000)
   })
 
