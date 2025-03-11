@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+# Environment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+自行安装好pnpm（npm也可以更推荐pnpm一步到位吧），直到可以在命令行中输入 `pnpm -v`能返回版本号
 
-Currently, two official plugins are available:
+# Install
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+在项目根目录下执行 `pnpm i`
 
-## Expanding the ESLint configuration
+# Run
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+执行 `pnpm run server`开启后端
+不要关闭后端控制台，另开一个命令行，执行 `pnpm run dev`开启前端，随后会在命令行中展示URL，打开即可。
 
-- Configure the top-level `parserOptions` property like this:
+# 打包
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+执行 `pnpm run build`
+等待打包即可在 `/dist`下看到打包出来的html文件，注意无法直接在浏览器中本地打开，需要用到服务器（要用到自行解决了）
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+实际上这些run命令来自于 `/package.json.script`，可以自行查看
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+# 源码
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 项目结构
+
+源码主要在 `/src`下
+
+main.tsx是入口文件，App.tsx……第二个入口？
+server：后端服务器代码
+util：工具类代码
+其余自行判断（懒）

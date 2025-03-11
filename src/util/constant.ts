@@ -1,4 +1,5 @@
-export const BASE_URL = 'http://66bc8f1.r19.vip.cpolar.cn/p-server';
+export const BASE_URL = '';
+// export const BASE_URL = 'http://66bc8f1.r19.vip.cpolar.cn/p-server';
 
 //**PT 2024-10-23 12:59
 // [
